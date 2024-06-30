@@ -1,0 +1,13 @@
+{
+    "build": {
+      "builder": "heroku/buildpacks:20"
+    },
+    "start": "python manage.py migrate && gunicorn beernpike.wsgi:application --bind 0.0.0.0:$PORT",
+    "env": {
+      "DEBUG": "False",
+      "ALLOWED_HOSTS": ".railway.app",
+      "DATABASE_URL": "postgresql://postgres:LyABReSfxqeOhFhEOzZeRfQljMhlpwWj@roundhouse.proxy.rlwy.net:37266/railway",
+      "SECRET_KEY": "JIOHUGY*OO9UIHGYv79otdr6787f5678yuGT&Y"
+    }
+  }
+  
