@@ -16,7 +16,7 @@ SECRET_KEY = 'NJHG*O^RF879YUTY^OG*HUIhyG(&^*IYhygufitrtghfydtru76878)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.railway.app']
+ALLOWED_HOSTS = ['artem-iw9b.onrender.com']
 
 
 # Application definition
