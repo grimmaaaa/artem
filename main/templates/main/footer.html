@@ -1,0 +1,116 @@
+{% load static %}
+<style>
+.footer-new {
+   padding: 40px 0;
+   background-color: #000000;
+   color: white;
+}
+
+.footer-new::after {
+   content: '';
+   position: absolute;
+   margin-bottom: 10em;
+   width: 100vw;
+   height: 1px;
+   background-color: black;
+   color: black;
+}
+
+.footer-new .container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.company-detailso {
+   margin-bottom: 20px;
+}
+
+.subcribe-siv p {
+   margin: 0;
+   font-size: 14px;
+}
+
+.solint-linst .btn {
+   margin-right: 10px;
+}
+
+.solint-linst .btn img {
+   display: block;
+}
+
+.solint-linst .btn:hover {
+   opacity: 0.7;
+}
+
+.footer-new hr {
+   border-color: #444;
+}
+
+.footer-new .text-white {
+   color: #ccc !important;
+}
+
+.footer-new .text-center {
+   text-align: center;
+}
+
+.footer-new .useful-info {
+   margin-top: 20px;
+}
+
+.footer-new .useful-info p {
+   margin: 0 0 10px;
+}
+
+.footer-new .useful-info p:first-child {
+   font-weight: bold;
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+.footer-new .useful-info p:nth-child(2) {
+   font-size: 14px;
+   color: #bbb;
+}
+
+.footer-new .useful-info p:last-child {
+   font-size: 14px;
+   color: #bbb;
+}
+</style>
+<footer class="float-start w-100 footer-new" style="margin-top: 0px; min-height: 0px; background-color: white;">
+    <div class="container">
+       <div class="row row-cols-1 row-cols-lg-3 g-5">
+          <div class="col">
+            <div class="company-detailso">
+               </p>
+               <div class="subcribe-siv d-flex align-items-center">
+                  <p>chella05andrey@gmail.com</p>
+                  <p style="margin-left: 15px;">+79999999999</p>
+               </div>
+              
+            </div>
+          </div>
+              
+              <div class="solint-linst d-flex align-items-center">
+                 <a href="https://vk.com/" class="btn"> <img height="30px" width="30px" src="{% static 'main/images/vk.png' %}" class="fab fa-facebook-f"> </a>
+                 <a href="https://t.me/piplapsq/" class="btn"> <img height="30px" width="30px" src="{% static 'main/images/telegram.png' %}" class="fab fa-twitter"> </a>
+                 <a href="https://t.me/piplapsq/" class="btn"> <img height="30px" width="30px" src="{% static 'main/images/whatsapp.png' %}" class="fab fa-google"> </a>
+                 <a href="https://instagram.com/" class="btn"> <img height="30px" width="30px" src="{% static 'main/images/instagram.png' %}" class="fab fa-google"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col useful-info">
+            <p>Полезные данные</p>
+            <p>О нас: Мы предлагаем лучшие места для охоты и рыбалки, обеспечивая незабываемые приключения на природе. Наша команда заботится о вашем комфорте и безопасности, предоставляя все необходимое оборудование и услуги.</p>
+            <p>Наш адресс: ул. Фейковая, д. 42, г. Новотроицк, Россия</p>
+          </div>
+       </div>
+       <hr class="bg-light">
+       <div class="d-flex align-items-center justify-content-between">
+        <p class="text-center text-white"> © 2024 Медведь и Щука. Все права защищены. </p>
+       </div>
+       
+       
+    </div>
+  </footer>

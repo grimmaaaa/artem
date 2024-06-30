@@ -1,0 +1,47 @@
+.hero-section {
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.products-section .card {
+    transition: transform 0.2s;
+}
+
+.products-section .card:hover {
+    transform: scale(1.05);
+}
+
+.info-section img {
+    border-radius: 10px;
+}
+
+.gallery-section .gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-section .gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-section .gallery-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.btn-primary {
+    background-color: #ff6f00;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c00;
+}

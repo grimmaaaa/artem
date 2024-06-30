@@ -1,0 +1,130 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="marhansolutions.com">
+    <title>Медведь и Щука</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+
+    <style>
+      * {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+
+<body>
+
+    <div>
+      {% include 'main/header.html' %}
+       
+        <section style="background-image: url({% static 'main/images/banner3.jpeg' %});" class="hero-section">
+            <div class="container text-center text-white">
+                <h1 style="margin-top: 5em;">Добро пожаловать в мир охоты и рыбалки</h1>
+                <p>Откройте для себя лучшие места и оборудование для вашего следующего приключения</p>
+                <button style="padding: .5em; background-color: green;" onclick="window.location.href = '{% url 'main:places' location='all' %}'">Забронировать</button>
+            </div>
+        </section>
+
+        <section class="products-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Наши товары</h2>
+                <div class="row">
+                  {% for product in products %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.desc }}</p>
+                                <p class="card-text"><strong>{{ product.price }} руб.</strong></p>
+                                <a href="{% url 'products:add_product' pk=product.pk %}" class="btn btn-primary">Добавить в корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Присоединяйтесь к нам</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'main/images/banner1.jpeg' %}" class="img-fluid mb-4" alt="Scenic Image">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Погрузитесь в незабываемые приключения на природе с нашими услугами. Мы предлагаем лучшее оборудование и советы, чтобы ваше путешествие было максимально комфортным и успешным.</p>
+                        <p>Посетите наши уникальные места для охоты и рыбалки, где вы сможете насладиться красивыми пейзажами и богатым уловом.</p>
+                        <p>Присоединяйтесь к сообществу любителей природы и активного отдыха уже сегодня!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Наши лучшие моменты на охоте и рыбалке</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="gallery-item">
+                            <img src="{% static 'main/images/banner1.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <div class="gallery-text">
+                                <h5>Озеро Тихое</h5>
+                                <p>Озеро Тихое расположено в самом сердце живописного лесного массива. Это идеальное место для тех, кто ищет уединения и спокойствия. Вода в озере кристально чистая, и здесь обитают такие виды рыб, как щука, окунь и карп. Рыбалка на озере Тихое – это не просто улов, это настоящее удовольствие и отдых на природе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="gallery-item">
+                            <img src="{% static 'main/images/banner2.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <div class="gallery-text">
+                                <h5>Лесной Утёс</h5>
+                                <p>Лесной Утёс – уникальное место для охоты, расположенное на скалистых возвышенностях среди густых лесов. Здесь можно встретить разнообразную дичь, включая кабанов, оленей и зайцев. Территория утёса прекрасно оборудована для охоты, а также предлагает уютные места для отдыха у костра после насыщенного дня на природе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="gallery-item">
+                            <img src="{% static 'main/images/banner3.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <div class="gallery-text">
+                                <h5>Река Быстрая</h5>
+                                <p>Река Быстрая протекает через живописные долины и густые леса, создавая идеальные условия для рыбалки. Быстрое течение и чистая вода делают это место популярным среди любителей нахлыста и донной рыбалки. Здесь водятся форель, лосось и сом. После удачного улова вы можете отдохнуть в специально оборудованных зонах пикника, наслаждаясь прекрасными видами и свежим воздухом.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+       {% include 'main/footer.html' %}
+         </div>
+       </div>
+      </div>
+
+
+<script src="{% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<script src="{% static 'main/js/custom.js' %}"></script>
+<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body></html>
