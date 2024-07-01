@@ -31,13 +31,17 @@
     <div>
       {% include 'main/header.html' %}
        
-        <section style="background-image: url({% static 'main/images/banner3.jpeg' %});" class="hero-section">
+        <section style="background-image: url({% static 'main/images/header_main.jpg' %});" class="hero-section">
             <div class="container text-center text-white">
                 <h1 style="margin-top: 5em;">Добро пожаловать в мир охоты и рыбалки</h1>
                 <p>Откройте для себя лучшие места и оборудование для вашего следующего приключения</p>
                 <button style="padding: .5em; background-color: green;" onclick="window.location.href = '{% url 'main:places' location='all' %}'">Забронировать</button>
             </div>
         </section>
+
+        <video autoplay mute loop controls width="100%" height="900px">
+            <source src="{{ video.video.url }}">
+        </video>
 
         <section class="products-section py-5">
             <div class="container">
@@ -65,7 +69,7 @@
                 <h2 class="text-center mb-5">Присоединяйтесь к нам</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="{% static 'main/images/banner1.jpeg' %}" class="img-fluid mb-4" alt="Scenic Image">
+                        <img src="{% static 'main/images/banner4.jpg' %}" class="img-fluid mb-4" alt="Scenic Image">
                     </div>
                     <div class="col-md-6">
                         <p>Погрузитесь в незабываемые приключения на природе с нашими услугами. Мы предлагаем лучшее оборудование и советы, чтобы ваше путешествие было максимально комфортным и успешным.</p>
@@ -82,7 +86,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="gallery-item">
-                            <img src="{% static 'main/images/banner1.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <img src="{% static 'main/images/banner1.jpg' %}" class="img-fluid" alt="Place Image">
                             <div class="gallery-text">
                                 <h5>Озеро Тихое</h5>
                                 <p>Озеро Тихое расположено в самом сердце живописного лесного массива. Это идеальное место для тех, кто ищет уединения и спокойствия. Вода в озере кристально чистая, и здесь обитают такие виды рыб, как щука, окунь и карп. Рыбалка на озере Тихое – это не просто улов, это настоящее удовольствие и отдых на природе.</p>
@@ -91,7 +95,7 @@
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="gallery-item">
-                            <img src="{% static 'main/images/banner2.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <img src="{% static 'main/images/banner2.jpg' %}" class="img-fluid" alt="Place Image">
                             <div class="gallery-text">
                                 <h5>Лесной Утёс</h5>
                                 <p>Лесной Утёс – уникальное место для охоты, расположенное на скалистых возвышенностях среди густых лесов. Здесь можно встретить разнообразную дичь, включая кабанов, оленей и зайцев. Территория утёса прекрасно оборудована для охоты, а также предлагает уютные места для отдыха у костра после насыщенного дня на природе.</p>
@@ -100,7 +104,7 @@
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="gallery-item">
-                            <img src="{% static 'main/images/banner3.jpeg' %}" class="img-fluid" alt="Place Image">
+                            <img src="{% static 'main/images/banner3.jpg' %}" class="img-fluid" alt="Place Image">
                             <div class="gallery-text">
                                 <h5>Река Быстрая</h5>
                                 <p>Река Быстрая протекает через живописные долины и густые леса, создавая идеальные условия для рыбалки. Быстрое течение и чистая вода делают это место популярным среди любителей нахлыста и донной рыбалки. Здесь водятся форель, лосось и сом. После удачного улова вы можете отдохнуть в специально оборудованных зонах пикника, наслаждаясь прекрасными видами и свежим воздухом.</p>

@@ -33,6 +33,10 @@ class RentPlace(models.Model):
         verbose_name_plural = 'Места'
 
 
+class Video(models.Model):
+    video = models.FileField(upload_to='video/')
+
+
 class BaseUser(AbstractUser):
     otchestvo = models.CharField('Отчество', max_length=255)
     have_licence = models.BooleanField('Имеет лицензию', default=False)

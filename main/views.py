@@ -8,7 +8,7 @@ from django.views.generic.edit import UpdateView, CreateView
 from django.views.generic import View, ListView
 
 from .forms import RegisterForm, LoginForm, CustomUserChangeForm, WeaponForm
-from .models import RentPlace
+from .models import RentPlace, Video
 
 from products.models import Product, RentOrder
 
@@ -20,7 +20,8 @@ class MainView(View):
 
     def get(self, request):
         context = {
-            'products': Product.objects.all()[:5]
+            'products': Product.objects.all()[:5],
+            'video': Video.objects.first()
         }
 
         return render(request, 'main/index.html', context=context)
