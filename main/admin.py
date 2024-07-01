@@ -1,7 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import RentPlace, BaseUser, WeaponApplication
+from .models import RentPlace, BaseUser, WeaponApplication, Video
+
+
+@admin.register(Video)
+class VideAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'video')
 
 
 @admin.register(WeaponApplication)
